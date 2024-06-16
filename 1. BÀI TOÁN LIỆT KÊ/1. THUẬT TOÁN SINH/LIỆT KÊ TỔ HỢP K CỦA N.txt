@@ -1,0 +1,10 @@
+
+X[1->K] : CẤU HÌNH NHỎ NHẤT ( 1, 2, 3, ..., K )
+WHILE TRUE
+	IN CẤU HÌNH 
+	FOR I := 1 -> K:
+		NẾU X[I] CHƯA LÀ CẤU HÌNH LỚN NHẤT ( N - K + I)
+			X[I] ++
+			X[I-1 -> N] : X[I-1] + 1 
+	NẾU CẤU HÌNH LỚN NHẤT
+		BREAK

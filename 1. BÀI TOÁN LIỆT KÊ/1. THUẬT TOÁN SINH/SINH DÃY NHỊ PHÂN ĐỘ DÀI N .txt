@@ -1,0 +1,16 @@
+
+X[1->N] : 0
+WHILE TRUE
+	
+	IN CẤU HÌNH HIỆN TẠI ( X[1->N] )
+	I := N 
+	WHILE(I > 0 && X[I] != 0) I --
+	
+	
+	IF CHƯA PHẢI CẤU HÌNH CUỐI ( I > 0)
+		X[I] = 1
+		X[I+1 -> N] : 0
+
+	
+	ELSE    
+		BREAK
