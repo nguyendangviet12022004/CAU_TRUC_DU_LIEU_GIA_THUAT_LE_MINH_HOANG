@@ -1,0 +1,16 @@
+Ý TƯỞNG:
+	TA CÓ MẢNG T[I] BẲNG TỔNG CỦA X[1->I]
+	PHÂN TÍCH THẤY T[I-1] + X[I] + X[I+1] <= N 
+			=> X[I] <= (N-T[I-1])/2 -> ĐÂY CHÍNH LÀ GIỚI HẠN TRÊN
+			=> X[I] >= X[I-1]       -> ĐÂY CHÍNH LÀ GIỚI HẠN DƯỚI
+	TA CHO THỬ GIÁ TRỊ CỦA X[I]	
+	SAU KHI THỬ XONG TA GÁN LẠI X[I] = T - T[I-1] -> MỤC ĐÍCH LÀ XỬ LÍ PHẦN DƯ CÒN LẠI , SAU ĐÓ IN RA CẤU HÌNH
+
+
+MÃ GIẢ:
+	FOR J := X[I-1] -> (N-T[I-1])/2
+		X[I] := J
+		T[I] := T[I-1] + J
+		ELSE QUAY LUI ( I + 1 )
+	x[I] := N - T[I-1]
+	IN CẤU HÌNH

@@ -1,0 +1,15 @@
+Ý TƯỞNG: KHÁ GIỐNG PHƯƠNG PHÁP CÀY TRÂU, CHỌN BỪA CÁC SỐ CÓ THỂ CHỌN( CÁC SỐ CHƯA ĐƯỢC CHỌN TRƯỚC ĐÓ) ĐỂ TẠO RA CHỈNH HỢP, ĐỂ KIỂM TRA XEM 1 SỐ ĐÃ ĐƯỢC CHỌN HAY CHƯA, TA SỬ DỤNG 1 MẢNG CHECK
+
+PSEUDO CODE:
+
+DUYỆT TÌM RA J LÀ SỐ ĐẦU TIÊN CHƯA ĐƯỢC CHECK
+	
+
+	X[I] := J
+
+	IF I = K
+		IN CẤU HÌNH
+	ELSE 
+		CHECK[J] := TRUE
+		QUAY LUI(I + 1)
+		CHECK[J] := FALSE

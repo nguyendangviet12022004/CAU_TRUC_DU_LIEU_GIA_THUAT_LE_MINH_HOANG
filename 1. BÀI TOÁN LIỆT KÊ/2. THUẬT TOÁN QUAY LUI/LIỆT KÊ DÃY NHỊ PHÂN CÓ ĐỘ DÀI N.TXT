@@ -9,7 +9,7 @@ VOID BACK_TRACK(K,N)
 		IF CẤU HÌNH CUỐI (K = N)
 			IN CẤU HÌNH 
 		ELSE 
-			BACK_TRACK(K+1,N)
+			QUAY LUI(K+1,N)
 
 
 
