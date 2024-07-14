@@ -1,7 +1,7 @@
 Ý TƯỞNG CHUNG LÀ CHO THỬ TỪNG GIÁ TRỊ CHO PHẦN TỬ X[I] RỒI CỨ TIẾP DIỄN CHO ĐẾN KHI I == K
 
 
-FOR J : (X[J-1]+1) -> (N-K+I)
+FOR J : (X[I-1]+1) -> (N-K+I)
 	X[I] := J
 	IF I == K
 		IN CẤU HÌNH RA

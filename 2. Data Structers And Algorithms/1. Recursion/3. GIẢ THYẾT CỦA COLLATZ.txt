@@ -1,0 +1,12 @@
+GIẢ THUYẾT CỦA COLLATZ:
+	CHO TRƯỚC MỘT SỐ NGUYÊN DƯƠNG N BẤT KÌ, NẾU N CHẴN THÌ CHIA ĐÔI, CÒN NẾU N LẺ THÌ GÁN BẰNG 3*N+1, SAU HỮU HẠN CÁC BƯỚC TA ĐƯỢC KẾT QUẢ LÀ 1
+
+MÃ GIẢ
+	IF X == 1 
+		PRINT X
+	IF X MOD 2 = 0
+		RECURSION(X/2)
+		PRINT(*2)
+	ELSE 
+		RECURSION(2*X+1)
+		PRINT(DIV3)

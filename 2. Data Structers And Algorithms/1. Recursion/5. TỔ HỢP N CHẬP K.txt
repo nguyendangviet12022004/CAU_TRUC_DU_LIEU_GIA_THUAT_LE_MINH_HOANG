@@ -1,0 +1,35 @@
+Ý TƯỞNG : LẤY CÔNG THỨC MÀ PHANG THÔI C[N][K] = C[N-1][K-1] + C[N-1][K]
+
+GIẢ MÃ
+	IF K == 0 || K == N -> 1
+	IF K == 1 || K == N-1 -> N
+	-> C(N-1,K-1) + C(N-1,K)
+
+CÓ THỂ CẢI TIẾN BẰNG QUY HOẠCH ĐỘNG ( SẼ ĐỀ CẬP CHƯƠNG SAU )
+
+
+MÃ C#
+using System;
+
+namespace Tester
+{
+    internal class Program
+    {
+        static int Combination(int k, int n)
+        {
+            if (k == 0 || k == n)
+            {
+                return 1;
+            }
+            if(k == 1 || k == n - 1)
+            {
+                return n;
+            }
+            return Combination(k, n - 1) + Combination(k-1, n-1);
+        }
+        static void Main(string[] args)
+        {
+            Console.WriteLine(Combination(3, 5));
+        }
+    }
+}

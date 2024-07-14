@@ -1,0 +1,72 @@
+Ý TƯỞNG:
+	TA CẦN LÀM RÕ 1 DÃY NGOẶC HỢP LỆ THOẢ MÃN 2 ĐIỀU KIỆN
+		SỐ LƯỢNG DÃY NGOẶC ĐÓNG VÀ MỞ PHẢI BẰNG NHAU ( MỞ BẰNG ĐÓNG = N/2) 
+		DUYỆT TỪ ĐẦU ĐẾN CUỐI , SỐ NGOẶC ĐÓNG TẠI 1 VỊ TRÍ BẤT KÌ LUÔN LỚN HƠN HOẶC BẰNG SỐ NGOẶC MỞ VÀ <= N/2
+	TA SẼ THÊM 1 MẢNG ĐỂ LƯU SỐ LƯỢNG NGOẶC ĐÓNG VÀ MỞ LIÊN TIẾP( ĐÓ CHÍNH LÀ ĐỘ SÂU), SO SÁNH VỚI K ĐỂ ĐÁNH GIÁ NHÁNH CẬN 
+
+
+
+PSEUDO CODE:
+	FOR CHOICE '(' OR ')'
+		X[I] = CHOICE
+		IF VALIDATE
+			T[I] = (X[I] = X[I-1] , T[I-1] + 1,1)
+			IF T[I] <= K
+				IF I == N
+					CHECK DETH (DEPT[1->N] == K)
+					PRINT
+				ELSE
+					BACKTRACK(I+1)
+
+CODE:
+
+#include<stdio.h>
+
+
+char config[1001];
+int open[10001];
+int close[1001];
+int depth[10001];
+
+int n;
+int k;
+
+void print(){
+	for(int i = 1;i <= n;i ++){
+		printf("%c",config[i]);
+	}
+	printf("\n");
+}
+
+int validate(int i){
+	return open[i] >= close[i] && open[i] <= n/2;
+}
+
+void backtrack(int i){
+	for (char c = '(' ; c <= ')'; c ++){
+		config[i] = c;
+		open[i] = (c=='(') ? open[i-1]+1 : open[i-1];
+		close[i] = (c==')') ? close[i-1]+1 : close[i-1];
+		if(validate(i)){
+			depth[i] = (config[i] == config[i-1]) ? depth[i-1]+1 : 1;
+			if(depth[i] <= k){
+				if(i == n){
+					for(int i = 1;i<= n;i ++){
+						if(depth[i] == k){
+							print();
+							break;
+						}
+					}
+				} else {
+					backtrack(i+1);
+				}
+			}
+		}
+	}
+}
+
+int main(){
+	n = 8;
+	k = 3;
+	backtrack(1);
+}

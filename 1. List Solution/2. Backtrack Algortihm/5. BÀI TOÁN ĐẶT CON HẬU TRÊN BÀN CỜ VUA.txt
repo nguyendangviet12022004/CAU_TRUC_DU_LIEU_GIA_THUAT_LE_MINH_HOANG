@@ -1,0 +1,72 @@
+Ý TƯỞNG:
+	NÓI QUA VỀ ĐƯỜNG CHÉO:
+		ĐƯỜNG CHÉO CHÍNH: KHI TĂNG I LÊN 1 -> J TĂNG LÊN 1 ==> I - J = CONSTANT(1-N -> N-1)
+		ĐƯỜNG CHÉO PHỤ: KHI TĂNG I LÊN 1 -> J GIẢM ĐI 1 ==> I + J = CONSTANT(2 -> 2N)
+
+	TA SẼ QUAY LUI TỪNG HÀNG, TRONG MỖI HÀNG CHỈ ĐƯỢC PHÉP CHỌN 1 CỘT MÀ TRƯỚC ĐÓ CHƯA CHỌN VÀ SAO CHO CHƯA BỊ ĐƯỜNG CHÉO NÀO ĐI QUA
+	TA SẼ DÙNG 3 MẢNG ĐỂ KIỂM TRA 1 VỊ TRÍ CHỌN HẬU CÓ HỢP LỆ HAY KHÔNG
+	COL[1..N] -> CỘT THỨ I CÓ HỢP LỆ KHÔNG
+	DIA1[1-N..N-1] -> ĐƯỜNG CHÉO C CÓ HỢP LỆ KHÔNG
+	DIA2[2..2N] -> ĐƯỜNG CHÉO C CÓ HỢP LỆ KHÔNG
+
+
+PSEUDO CODE: 	
+	FOR C [1->N]:
+		IF !COL[C] &&!DIA1[R-C] && !DIA2[R+C]
+			X[R] = C;
+			IF R == N
+				IN CẤU HÌNH
+			ELSE 
+				COL[C] = DIA1[R-C] = DIA2[R+C] = TRUE
+				BACKTRACK(R+1)
+				COL[C] = DIA1[R-C] = DIA2[R+C] = TRUE
+
+
+CODE:
+
+#include<stdio.h>
+#include<stdlib.h>
+
+int col[10001] = {0};
+int d1[10001] = {0};
+int d2[10001] = {0};
+
+int x[10001];
+int n = 10;
+int count = 1;
+
+
+void print(){
+	printf("%d\n",count++);
+	for(int i = 1;i <= n;i ++){
+		int k = x[i];
+		for(int j = 1; j < k;j ++) {
+			printf("_");
+		}
+		printf("X");
+		for(int j = k + 1;j <= n;j ++){
+			printf("_");
+		}
+		printf("\n");
+	}
+	printf("\n\n\n");
+}
+
+void backtrack(int r){
+	for(int c = 1; c <= n; c ++){
+		if(!col[c] && !d1[r+c] && !d2[r-c+n+1]){
+			x[r] = c;
+			if(r == n){
+				print();
+			} else {
+				col[c] = d1[r+c] = d2[r-c+n+1] = 1;
+				backtrack(r + 1);
+				col[c] = d1[r+c] = d2[r-c+n+1] = 0;
+			}
+		}
+	}
+}
+
+int main(){
+	backtrack(1);
+}

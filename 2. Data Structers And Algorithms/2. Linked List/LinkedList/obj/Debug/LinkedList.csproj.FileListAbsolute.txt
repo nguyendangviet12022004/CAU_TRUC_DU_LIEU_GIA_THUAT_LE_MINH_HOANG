@@ -1,0 +1,14 @@
+C:\Users\ACER\source\repos\LinkedList\bin\Debug\LinkedList.exe.config
+C:\Users\ACER\source\repos\LinkedList\bin\Debug\LinkedList.exe
+C:\Users\ACER\source\repos\LinkedList\bin\Debug\LinkedList.pdb
+C:\Users\ACER\source\repos\LinkedList\obj\Debug\LinkedList.csproj.AssemblyReference.cache
+C:\Users\ACER\source\repos\LinkedList\obj\Debug\LinkedList.csproj.CoreCompileInputs.cache
+C:\Users\ACER\source\repos\LinkedList\obj\Debug\LinkedList.exe
+C:\Users\ACER\source\repos\LinkedList\obj\Debug\LinkedList.pdb
+D:\Data Structers And Algorithms ( Le Minh Hoang )\2. Data Structers And Algorithms\2. Linked List\LinkedList\bin\Debug\LinkedList.exe.config
+D:\Data Structers And Algorithms ( Le Minh Hoang )\2. Data Structers And Algorithms\2. Linked List\LinkedList\bin\Debug\LinkedList.exe
+D:\Data Structers And Algorithms ( Le Minh Hoang )\2. Data Structers And Algorithms\2. Linked List\LinkedList\bin\Debug\LinkedList.pdb
+D:\Data Structers And Algorithms ( Le Minh Hoang )\2. Data Structers And Algorithms\2. Linked List\LinkedList\obj\Debug\LinkedList.csproj.AssemblyReference.cache
+D:\Data Structers And Algorithms ( Le Minh Hoang )\2. Data Structers And Algorithms\2. Linked List\LinkedList\obj\Debug\LinkedList.csproj.CoreCompileInputs.cache
+D:\Data Structers And Algorithms ( Le Minh Hoang )\2. Data Structers And Algorithms\2. Linked List\LinkedList\obj\Debug\LinkedList.exe
+D:\Data Structers And Algorithms ( Le Minh Hoang )\2. Data Structers And Algorithms\2. Linked List\LinkedList\obj\Debug\LinkedList.pdb

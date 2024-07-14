@@ -1,0 +1,87 @@
+Ý TƯỞNG: ÁP DỤNG KĨ THUẬT QUAY LUI, BÊN CẠNH ĐÓ SỬ DỤNG THÊM BIẾN DIS[](LƯU QUÃNG ĐƯỜNG) VÀ BIẾN MIN_PATH ĐỂ LƯU QUÃNG ĐƯỜNG NHỎ NHẤT, MỖI KHI QUAY LUI TA SẼ THỬ XEM DIS CÓ NHỎ HƠN MIN_PATH KHÔNG, => ĐÂY COI NHƯ LÀ ĐIỀU KIỆN ĐỂ LOẠI BỎ TH THỪA
+
+PSEUDO CODE:
+
+FOR NOT VISITED AND ADJ CITY OF X[I-1]
+	DIS[I] += DIS[X[I-1] + MATRIX[X[I-1],V]
+	IF DIS[I] < MIN_DIS
+		IF I < N
+			VISITTED[V] = TRUE
+			BACKTRACK(I+1)
+			VISITED[V] = FALSE
+		ELSE
+			IF DIS[I] + MATRIX[X[I],1] < MIN_PATH
+				UPDATE BEST_CONFIG, MIN_PATH
+
+
+
+CODE C:
+
+#include<stdio.h>
+
+#define ff(i,a,b,s) for(int i = a;i <= b;i += s)
+#define fl(i,a,b,s) for(int i = a;i >= b;i -= s)
+
+
+int tmpConfig [10001];
+int bestConfig [10001];
+int distance [10001];
+int minDis = 100000001;
+int visit [10001];
+int  adjMatrix [10001][10001];
+int vertices;
+int edges;
+
+void input(){
+	int x,y,d;
+	scanf("%d %d",&vertices,&edges);
+	for(int i = 1;i <= edges;i ++){
+		scanf("%d %d %d",&x,&y,&d);
+		adjMatrix[x][y] = adjMatrix[y][x] = d;
+	}
+}
+
+void updateConfig(){
+	for(int i = 1;i <= vertices;i ++){
+		bestConfig[i] = tmpConfig[i];
+	}
+}
+
+void printConfig(){
+	for(int i = 1;i <= vertices;i ++){
+		printf("%d->",bestConfig[i]);
+	}
+	printf("1\n");
+}
+
+void backtrack(int k){
+	for(int i = 2;i <= vertices;i ++){
+		if(!visit[i] && adjMatrix[tmpConfig[k-1]][i] != 0){
+			tmpConfig[k] = i;
+			distance[k] = distance[k-1] + adjMatrix[tmpConfig[k-1]][i];
+			if(distance[k] < minDis){
+				if(k == vertices){
+					if(distance[k] + adjMatrix[i][1] < minDis){
+						minDis = distance[k] + adjMatrix[i][1];
+						updateConfig();
+					}
+				} else {
+					visit[i] = 1;
+					backtrack(k+1);
+					visit[i] = 0;
+				}
+			}
+		}
+	}
+}
+
+int main(){
+	input();
+	tmpConfig[1] = 1;
+	visit[1] = 1;
+	backtrack(2);
+	printConfig();
+	return 0;
+}
+
+
