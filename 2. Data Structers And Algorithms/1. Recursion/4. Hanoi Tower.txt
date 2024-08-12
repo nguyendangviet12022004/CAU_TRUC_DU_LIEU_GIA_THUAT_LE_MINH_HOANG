@@ -1,0 +1,6 @@
+if n = 1
+	print console
+else
+	move(n-1,a -> b)
+	move(1,a->c)
+	move(n-1,b->a)

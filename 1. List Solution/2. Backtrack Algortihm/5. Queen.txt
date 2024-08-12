@@ -1,0 +1,15 @@
+1) Main diagonal : i increase and j also increase => i - j is const
+2) Second diagonal: i increase and j decrease => i + j is const
+
+
+pseudo code
+backtrack(i)
+	for j in [1..n]
+		if all (col[j], mainDiagonal[i-j], secondDiagonal[i+j]) are false
+			config[i] := j
+			if i = n
+				accept the config
+			else
+				col[j] = mainDiagonal[i-j] = secondDiagonal[i+j] := True
+				backtrack(i+1)
+				col[j] = mainDiagonal[i-j] = secondDiagonal[i+j] := False

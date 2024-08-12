@@ -1,0 +1,10 @@
+config[1..k] := [1,2,3,..k]
+while true
+	accept config
+	i := k
+	while i >= 1 and config[i] = n - k + i
+		i --
+	if i == 0
+		halt the program
+	config[i] ++
+	config[i+1..k] := config[previous] + 1

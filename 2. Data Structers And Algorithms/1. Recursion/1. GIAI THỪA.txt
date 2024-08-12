@@ -1,3 +1,0 @@
-IF N = 0 
-	RETURN 1
-RETURN GIAI THỪA(N-1) * N;

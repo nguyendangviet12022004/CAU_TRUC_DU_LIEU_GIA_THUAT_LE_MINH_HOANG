@@ -1,0 +1,36 @@
+z := 4
+parrent := null
+current := root
+
+for b in [z-1,0] 
+	if current is null
+		halt the program
+	parrent := current
+	if bit b of value = 0
+		current := current.left
+	else
+		current := current.right
+	
+	if b = z-1 or (parrent.left and parrent.right is not null )
+		turnNode := parrent
+		child := current
+
+if current is null
+	halt the program
+
+if turnNode.left = current 
+	turnNode.left = null
+else 
+	turnNode.right = null
+
+current := child
+
+while current is not null
+	parrent = current
+	if current.left is not null
+		current = current.left
+	else
+		current = current.right
+
+	
+	free(current)	

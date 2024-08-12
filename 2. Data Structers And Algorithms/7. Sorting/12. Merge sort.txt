@@ -1,0 +1,21 @@
+merge(array, left, mid, right)
+	array1 := array[left..mid]
+	array2 := array[mid+1..right]
+	i = j = 0
+	id := left;
+	while i < len1 and j < len2
+		if array1[i] < array2[j]
+			array[id++] := array1[i++]
+		else 
+			array[id++] := array2[j++]
+	while i < len1
+		array[id++] := array1[i++]
+	while j < len2
+		array[id++] := array2[j++]
+
+sort(array,left,right)
+	if left < right
+		mid := (left + right)/2
+		sort(array,left,mid)
+		sort(array,mid+1,right)
+		merge(left,mid,right)

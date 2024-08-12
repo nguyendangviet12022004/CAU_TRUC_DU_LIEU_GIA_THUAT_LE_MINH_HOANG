@@ -1,0 +1,15 @@
+pseudo code
+
+backtrack(i)
+	for not visited v
+		config[i] := v
+		dis[i] := dis[i-1] + adj[config[i-1] , v]
+		if dis[i] < minDis
+			if i = n
+				if dis[n] + adj[n,1] < minDis
+					update minDis
+					update bestConfig
+			else
+				visited[v] := True
+				backtrack(i+1)
+				visited[v] := False

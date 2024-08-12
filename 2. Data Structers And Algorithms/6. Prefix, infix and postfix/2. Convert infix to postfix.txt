@@ -1,0 +1,13 @@
+for each element of expression
+	case open '['
+		stack.push(open)
+	case close ']'
+		while st.top is not open '['
+			postfix += st.pop
+		st.pop
+	case integer
+		postfix += integer
+	case operator
+		while st.top.priority >= operator.priority
+			postfix += st.pop
+		stack.push(operator)

@@ -1,0 +1,8 @@
+Time Complexity: O(n^2)
+
+for i in [0,length-1)
+	jmin := i
+	for j in [i+1,length)
+		if array[j] < array[jmin]
+			jmin := j
+	swap array[i] and array[jmin]

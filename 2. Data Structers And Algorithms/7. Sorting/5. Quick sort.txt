@@ -1,0 +1,35 @@
+// pick randomly pivot element
+if left >= right 
+	halt the program
+
+pivot := array at random index [left -> right]
+i := left
+j := right
+
+while i <= j
+	while array[i] < pivot
+		i ++
+	while array[j] < pivot
+		j --
+	if i < j
+		swap (array[i], array[j])
+		i ++
+		j --
+
+QuickSort(left,j)
+QuickSort(i,right)
+
+
+
+// pick last pivot element
+if left >= right 
+	halt the program
+
+pivot := array[right]
+median := left
+for i in [left,right)
+	if array[i] < pivot
+		swap(i,median++)
+swap(right,median)
+QuickSort(left,median-1)
+QuickSort(median+1,right)

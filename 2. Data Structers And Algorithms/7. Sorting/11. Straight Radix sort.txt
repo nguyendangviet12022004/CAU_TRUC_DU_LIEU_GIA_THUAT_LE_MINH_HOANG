@@ -1,0 +1,21 @@
+Distribution Count( p )
+	for value of array 
+		d := getDigit(value,p)
+		count[d] ++
+	
+	for i in [1,9]
+		count[i] := count[i-1] + count[i]
+
+	for value of array
+		d := getDigit(value,p)
+		copy_array[count[d]] := value
+		count[d] --
+	
+	array := copy_array
+
+Sort 
+	for p in [ 0 , MAX_DIGIT ]
+		Dcount(p)
+
+		
+		

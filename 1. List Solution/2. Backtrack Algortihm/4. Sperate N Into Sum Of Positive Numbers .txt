@@ -1,0 +1,15 @@
+We have sum[i-1] + num[i] + num[i+1] <= n and num[i] <= num[i+1]
+so that num[i] <= (n-sum[i-1])/2 
+
+ceil limit: (n-sum[i-1])/2
+floor limt: num[i-1]
+
+
+pseudo code:
+backtrack(index)
+	for value in [num[i-1], (n-sum[i-1])/2]
+		config[index] := value
+		sum[i] := sum[i-1] + num[i]
+		backtrack(index+1)
+	num[i] = n - sum[i-1]
+	accept config

@@ -1,0 +1,6 @@
+for each element in expression
+	if element is operand
+		stack.push(element)
+	else operator
+		pop 2 operand from stack then calculate it with operator
+		stack.push(result)

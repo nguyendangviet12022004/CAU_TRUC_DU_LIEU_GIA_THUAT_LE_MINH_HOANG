@@ -1,0 +1,15 @@
+quick sort(left, right,b)
+	if left >= right
+		halt the program
+	i := left
+	j := right
+	while i < j
+		while i < j and bit b of array[i] := 0
+			i ++
+		while i < j and bit b of array[j] := 1
+			j --
+		swap (i,j)
+	if bit b of array[j] := 0 
+		j ++
+	sort(left,j-1,b-1) 
+	sort(j,right,b-1)

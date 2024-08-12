@@ -1,0 +1,42 @@
+// bit to compare value in dept i := z - i ( z is length of bit wase)
+
+1. Recursion
+insert(root,val,b)
+	if not root
+		return new node (val)
+	else
+		if bit b of val = 0
+			root.left = insert(root.left,val,b-1)
+		else 
+			root.right = insert(root.right,val,b-1)
+	return root
+
+
+
+
+
+2. Iterative
+insert(root,val)
+
+	b := z
+	current := root
+	parrent := null
+
+	while current is not null
+	if current.val = val
+			duplicate => halt the program
+		b --
+		parrent := current
+		if bit b of val = 0
+			current := current.left
+		else
+			current := current.right
+
+
+	if parrent = null
+		root := new node
+	else if bit b of val = 0
+		parrent.left = new node
+	else 
+		parrent.right = new node
+	return root

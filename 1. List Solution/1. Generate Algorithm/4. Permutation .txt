@@ -1,0 +1,16 @@
+config[1..n] := [1,2,..n]
+
+while true
+	i := n - 1
+	while i >= 1 and config[i] > config[i+1]
+		decrease i
+	if i = 0
+		final config, halt the program
+
+	j := n
+	while config[j] < config[i]
+		dercease j
+	
+	swap config[i] with config[j]
+	reverse config[i+1,n]
+	

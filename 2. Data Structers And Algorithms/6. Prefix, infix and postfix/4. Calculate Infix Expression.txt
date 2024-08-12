@@ -1,0 +1,15 @@
+for each element in expression
+	case number
+		stack1.push(number)
+	case open parenthesis
+		stack2.push(open)
+	case close parenthesis
+		while stack2.peek != open
+			num := cal(stack1.pop, stack1.pop, stack2.pop)
+			stack1.push(num)
+		stack2.pop
+	case operator
+		while stack2.peek.priority >= operator.priority
+			num := cal(stack1.pop, stack1.pop, stack2.pop)
+			stack1.push(num)
+		stack2.push(operator)

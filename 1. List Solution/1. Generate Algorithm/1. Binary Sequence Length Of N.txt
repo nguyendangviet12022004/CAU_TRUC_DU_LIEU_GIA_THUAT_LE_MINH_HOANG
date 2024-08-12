@@ -1,0 +1,22 @@
+config[1..n] := 0
+while true
+	accept config
+	i := n
+	while i >= 1 and config[i] != 0 
+		i --
+	
+	// Case this is the final config
+	if i == 0 
+		halt the program
+	else 
+		config[i] := 1
+		config[i+1..n] := 0
+
+
+
+
+
+
+
+
+

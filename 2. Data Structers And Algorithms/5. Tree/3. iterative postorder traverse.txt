@@ -1,0 +1,15 @@
+while root is not null and stack is not empty
+	while root is not null
+		if root.right is not null
+			stack.push(root.right)
+		stack.push(root)
+		root := root.left
+	
+	root := stack.pop()
+	if root.right is not null and stack.peek = root.right
+		stack.pop()
+		stack.push(root)
+		root := root.right
+	else 
+		// action with root
+		root := null

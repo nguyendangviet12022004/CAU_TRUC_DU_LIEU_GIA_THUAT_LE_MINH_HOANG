@@ -1,0 +1,19 @@
+heaptify (root, length)
+	tmp:= array[root]
+	while root * 2 + 1 < length
+		child := root * 2 + 1
+		if child + 1 < length and array[child]  < array[child+1] 
+			child := child + 1 
+		if array[child] <= tmp 
+			halt the function
+		array[root] := array[child]
+		root := child;
+	array[root] := tmp 
+
+
+heapsort
+	for root in [(length-1)/2, 0]
+		heaptify(root, length)
+	for i in [lenght-1,1]
+		swap array[0] to array[i]
+		heaptify(0,i)

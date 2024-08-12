@@ -1,0 +1,10 @@
+for value of array
+	count[value] ++
+id := 0
+for value in [MIN_VALUE,MAX_VALUE]
+	count[value] := count[value-1] + count[value]
+
+for value of array
+	copy_array[count[value]-1] := value
+	count[value] --;
+		 

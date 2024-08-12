@@ -1,0 +1,2 @@
+enqueue: rear = (rear + 1) % MAX
+dequeue: front = (front + 1) % MAX

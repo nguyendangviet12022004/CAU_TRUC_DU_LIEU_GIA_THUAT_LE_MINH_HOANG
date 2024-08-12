@@ -1,0 +1,10 @@
+For any postive int number, if even number, divide it by 2, otherwise time to 2 and plus 1. In the end we will get 1
+
+if x = 1
+	print x
+else if x & 1
+	recursion(2*x+1)
+	print (div 3)
+else
+	recursion(x/2)
+	print (time 2)

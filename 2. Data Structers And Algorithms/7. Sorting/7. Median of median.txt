@@ -1,0 +1,14 @@
+Median(left, right)
+
+length := right - left + 1
+if length < 50
+	insertionSort(left,right)
+	return array[left + right] / 2
+
+id := left - 1
+for i in [left,right-4,step = 5]
+	insertionSort(left,left+4)
+	id ++
+	swap array[id] and array[i+2]
+
+return Median(left,id)

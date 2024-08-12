@@ -1,0 +1,22 @@
+QuickSelection(left,right,position)
+
+pivot := array[random[left->right]]
+i := left
+j := right
+
+while i <= j
+	while array[i] < pivot 
+		i ++
+	while array[j] > pivot
+		j --
+	if i <= j
+		swap array[i] and array[j]
+		i ++
+		j --
+
+if position <= j 
+	return QuickSelection(left,j,position)
+else if position >= i
+	return quickSelection(i,right,position)
+else 
+	return pivot

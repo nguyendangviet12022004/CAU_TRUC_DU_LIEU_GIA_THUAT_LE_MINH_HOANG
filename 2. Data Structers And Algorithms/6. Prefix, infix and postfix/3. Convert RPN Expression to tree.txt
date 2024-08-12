@@ -1,0 +1,10 @@
+for each element in expression
+	node := new node(element)
+	if element is number
+		stack.push(node)
+	else 
+		number2 := stack.pop()
+		number1 := stack.pop()
+		node.left := number1
+		node.right := number2
+		stack.push(node)

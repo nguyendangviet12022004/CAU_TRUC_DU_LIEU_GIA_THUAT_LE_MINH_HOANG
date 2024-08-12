@@ -1,0 +1,9 @@
+paseudo code 
+
+backtrack(index)	
+	for value in [0,1]
+		config[index] := value
+		if index = n 
+			accept the config
+		else 
+			backtrack(index + 1)

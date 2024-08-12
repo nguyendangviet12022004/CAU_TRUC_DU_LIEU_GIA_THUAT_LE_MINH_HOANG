@@ -1,0 +1,4 @@
+for i in [1,length)
+	for j in (length,i,-1]
+		if array[j] < array[j-1]
+			swap them 

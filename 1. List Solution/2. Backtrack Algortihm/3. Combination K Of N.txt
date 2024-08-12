@@ -1,0 +1,12 @@
+ceil limit : n - k + i
+floor limit : config[i-1]
+
+
+pseudo code
+backtrack(i)
+	for value in [config[i-1] .. n - k + i]
+		config[i] := value
+		if i == n
+			accept the config
+		else
+			backtrack(i+1)

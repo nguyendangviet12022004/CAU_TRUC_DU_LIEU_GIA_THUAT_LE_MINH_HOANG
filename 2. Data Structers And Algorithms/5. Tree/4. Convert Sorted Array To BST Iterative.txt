@@ -1,0 +1,28 @@
+Use stack to store 2 index left and right , similar to use stack in preOrder iterative algorithm
+
+
+Paseudo code
+	while left <= right and stack is not empty
+		if left > right 
+			[left, right] = indexStack.pop()
+			node = nodeStack.pop()
+		index = (left + right)/2
+		
+		// Frist and only iterater when root is null
+		if root is null 
+			root = new node (array[index])
+			node = root
+
+		push[index+1,right] into indexStack
+		push node into nodeStack
+
+		if array[index] > node.value
+			node.right = new node (array[index])
+			node = node.right
+		else if array[index] < node.val
+			....left ...
+			............left
+		
+
+		right = index-1
+

@@ -1,0 +1,35 @@
+b := z
+current := root
+parrent := null
+
+while current is not null and current.val != target
+	b --
+	if bit b of target = 0
+		current := current.left
+	else 
+		current := current.right
+
+if current is null
+	halt the program 
+
+if current.left and current.right are not null
+	node := current
+	parrent := current
+	current := current.left
+	while current.right is not null
+		parrent := current
+		current := current.right
+	node.val = current.val
+
+
+if current.left is not null
+	child := current.left
+else
+	child := current.right
+
+if parrent is null 
+	root := child
+else if parrent.left = current
+	parrent.left = child
+else 
+	parrent.right = child

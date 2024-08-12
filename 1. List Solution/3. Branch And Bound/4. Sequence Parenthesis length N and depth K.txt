@@ -1,0 +1,25 @@
+validate : open[i] >= close[i] and open[i] <= n / 2 and depth[i] <= k
+
+
+
+backtrack(i)
+	for c is open or close
+		update open[i] := open[i-1] + (c is open)
+		update close[i] := close[i-1] + (c is close)
+		update depth[i] := (config[i-1] = config[i]) ? depth[i-1] + 1 : depth
+		if valid
+			if i = n	
+				if check depth = k
+					accpet the config
+			else
+				backtrack(i+1)
+
+
+
+recursion(open , close, str)
+	if  open < 0 or close < 0 or open > close	
+		halt the program
+	if open = 0 and close = 0
+		accept the str 
+	if(open > 0) recursion(open-1,close,str + open character)
+	if(close > 0) recursion(open,close-1,str + close character)

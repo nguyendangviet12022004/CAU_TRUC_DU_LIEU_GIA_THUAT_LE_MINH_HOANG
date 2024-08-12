@@ -1,0 +1,30 @@
+count := 2
+config := [n - 1, 1]
+
+while true
+	accept the config
+	i := count
+	while i >= 1 and config[i] = 1 
+		decrease i
+	if i == 0
+		final case, halt the program
+	
+	decrease config[i] 
+
+	remain := count - i + 1
+	div := remain / config[i]
+	mod := remain % config[i]
+
+	config[i+1..i+div] := config[i]
+
+	count := i + idv
+	
+	if mod <> 0 
+		increase count
+		config[count] := mod
+		
+
+
+
+
+	

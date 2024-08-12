@@ -1,0 +1,11 @@
+// variant of insertion sort
+step := length div 2
+while step > 0 
+	for i in [step, length) 
+		tmp := array[i]
+		j := i - step
+		while j > 0 and array[j] > tmp 
+			array[j+step] := array[j]
+			j -= step
+		array[j+step] := tmp
+	step /= 2

@@ -1,0 +1,10 @@
+backtrack(index)
+	for value in [1,2...n]
+		if value is not exist in config
+			config[index] := value
+			if index = n
+				accept the config
+			else
+				mark value is exist
+				backtrack(index+1)
+				mark value is not exist

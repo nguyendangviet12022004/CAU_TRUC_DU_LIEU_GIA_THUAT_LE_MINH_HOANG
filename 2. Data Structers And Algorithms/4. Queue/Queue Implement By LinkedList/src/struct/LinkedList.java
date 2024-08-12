@@ -5,23 +5,38 @@ public class LinkedList {
 	private Node tail;
 	
 	public LinkedList(){
-		this.head = null;
-		this.tail = null;
+		head = null;
+		tail = null;
 	}
 	
 	public boolean isEmpty(){
-		return this.head == null || this.tail == null;
+		return head == null || tail == null;
 	}
 	
-	public int getHead() throws Exception{
-		return this.head.data;
+	public Node getHead(){
+		return head;
 	}
 	
-	public int getTail() throws Exception{
-		return this.tail.data;
+	public Node getTail(){
+		return tail;
 	}
 	
-	public void pushHead(int data){
-		
+	public void pushTail(int _data){
+		Node node = new Node(_data);
+		if(isEmpty()){
+			head = tail = node;
+		} else {
+			tail.next = node;
+			tail = node;
+		}
 	}
+	
+	public Node popHead(){
+		if(isEmpty()) return null;
+		Node node = this.head;
+		this.head = this.head.next;
+		return node;
+	}
+	
+	
 }

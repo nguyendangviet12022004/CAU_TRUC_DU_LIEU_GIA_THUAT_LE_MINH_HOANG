@@ -1,0 +1,11 @@
+Similar to backtrack algorithm, but adding condition to remove some unnessasory case
+
+PASEUDO:
+
+backtrack(i)
+	for value
+		case can have better config with value
+			if i = n
+				accept config
+			else
+				backtrack(i+1)

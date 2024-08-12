@@ -1,0 +1,10 @@
+
+index := -1
+left := 0
+right := length - 1
+while left <= right
+	median := (right-left)/2 + left
+	if array[median] = target
+		index := median
+		break
+	else if array[median] > target

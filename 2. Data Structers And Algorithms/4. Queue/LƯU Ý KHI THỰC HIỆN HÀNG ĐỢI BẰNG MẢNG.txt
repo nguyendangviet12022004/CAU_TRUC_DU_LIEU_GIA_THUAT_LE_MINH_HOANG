@@ -1,7 +1,0 @@
-TRONG QUÁ TRÌNH THỰC THI HÀNG ĐỢI BĂNG MẢNG TA SẼ GẶP CÁC VẤN ĐỀ SAU:
-1. KHI ENQUEUE BIẾN REAR SẼ TĂNG THÊM 1 => CÓ THỂ DẪN ĐẾN TH TRÀN QUEUE 
-2. KHI DEQUEUE BIẾN FRONT SẼ TĂNG THÊM 1 => ___________________________
-
-GIẢI PHÁP :
-REAR = (REAR + 1) % MAX
-FRONT = (FRONT + 1) % MAX

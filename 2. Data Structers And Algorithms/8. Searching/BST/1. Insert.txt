@@ -1,0 +1,32 @@
+1) recursion
+insert(root, val)
+	if not root
+		return new node(val)
+	if root.val = val
+		return root
+	if val < root.val
+		root.left = insert(root.left,val)
+	else 
+		root.right = insert(root.right,val)
+	return root
+
+2) iterative
+insert(root,val)
+	parrent := null
+	current := root
+	while current 
+		if current.val = val
+			duplicated => halt the program
+		else if val < current.val
+			current := current.left
+		else
+			current := current.right
+
+	if not parrent 
+		root := new node(val)
+	else
+		if val < parrent.val
+			parrent.left = new node(val)
+		else
+			parrent.right = new node(val)
+

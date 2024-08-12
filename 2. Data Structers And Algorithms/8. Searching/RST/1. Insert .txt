@@ -1,0 +1,17 @@
+parrent := null
+current := root
+for b in [z-1,0]
+	parrent := current
+	if bit b of value = 0
+		current = current.left
+	else
+		current = current.right
+	
+	if current = null
+		current = new node
+		if bit b of value = 0
+			parrent.left = current
+		else 
+			parrent.right = current
+
+current.value = value

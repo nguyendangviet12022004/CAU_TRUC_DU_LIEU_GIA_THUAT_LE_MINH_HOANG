@@ -1,0 +1,7 @@
+while node is not null and stack is not empty
+	if node is null
+		node := stack.pop()
+	// action with node
+	if node.right is not null
+		stack.push(node.right)
+	node := node.left
