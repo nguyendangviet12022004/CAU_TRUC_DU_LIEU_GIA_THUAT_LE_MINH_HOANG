@@ -33,4 +33,4 @@ while current is not null
 		current = current.right
 
 	
-	free(current)	
+	free(parrent)	

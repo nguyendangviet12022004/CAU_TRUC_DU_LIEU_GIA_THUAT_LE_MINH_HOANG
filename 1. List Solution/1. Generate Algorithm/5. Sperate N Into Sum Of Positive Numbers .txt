@@ -17,7 +17,7 @@ while true
 
 	config[i+1..i+div] := config[i]
 
-	count := i + idv
+	count := i + div
 	
 	if mod <> 0 
 		increase count

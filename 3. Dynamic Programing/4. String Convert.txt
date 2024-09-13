@@ -1,0 +1,20 @@
+A[i] = B[j] -> F[i,j] := F[i-1][j-1]
+A[i] ! B[j] -> F[i,j] := MIN(F[i,j-1], F[i-1,j-1], F[i-1,j]) + 1
+
+
+for j := 0 to m f[0,j] := j
+for i := 0 to n f[i,0] := i
+
+
+for i := 1 to n
+	for j := 1 to m
+		// ap dung cong thuc tren
+
+
+
+while m and n not eq 0
+	if A[n] eq B[m]	
+		n --
+		m --
+	else 
+		// su dung cong thuc de truy vet

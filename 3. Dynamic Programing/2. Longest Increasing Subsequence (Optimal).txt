@@ -1,0 +1,32 @@
+left := 1
+right := m + 1
+
+while left < right
+	j := startOf[median]
+	if a[j] > a[i] 
+		left := median
+	else 
+		right := median
+return left
+
+
+
+m := 1
+startOf[1] := n + 1;
+
+for i [n,0]
+	j := find(i)
+	k := L[j] + 1
+	
+	if k > m 
+		update m 
+		startOf[k] := i
+	else
+		if a[startOf[k]] < a[i]
+			startOf[k] := i
+	
+	L[i] := k
+	T[i] := j
+
+
+truy vet tuong tu 

@@ -1,0 +1,15 @@
+for i in [1,n]
+	for j in [0,m]
+		f[i,j] := f[i-1,j]
+		if j >= W[i]  and F[i,j] < f[i-1,j-w[i]] + v[i]
+			f[i,j] := f[i-1,j-w[i]] + v[i]
+
+
+
+// truy vet
+
+while n != 0
+	if f[n,m] != f[n-1,m] 
+		accept n 
+		m -= w[n]
+	n --

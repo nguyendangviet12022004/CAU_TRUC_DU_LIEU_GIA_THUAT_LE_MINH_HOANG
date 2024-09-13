@@ -1,0 +1,23 @@
+F[n+1] := 1
+F[i] := max(f[i] , f[j] + 1] // j > i && a[j] > a[i]
+
+
+F[n + 1] := 1
+A[n+1] := MAX
+A[0] := MIN
+
+for i in [n,0]
+	jmax := n + 1
+	for j in [i+1,n]	
+		if a[i] < a[j] && f[i] < f[j+1] + 1
+			f[i] := f[j] + 1
+			t[i] := i
+			jmax := j
+
+
+i := t[0] 
+while i <> n + 1
+	// accept a[i]
+	i := t[i]
+
+

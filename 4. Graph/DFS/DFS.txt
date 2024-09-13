@@ -1,0 +1,13 @@
+Stack push start vertice
+
+while stack is not empty 
+	top := stack.pop()
+	top.visited := true
+	// insert code
+
+	for not visíted and adj to top
+		stack.push
+
+
+
+

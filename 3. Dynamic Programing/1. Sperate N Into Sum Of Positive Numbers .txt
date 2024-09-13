@@ -1,0 +1,41 @@
+Formular : F[num,sum] := F[num-1,sum] + F[num,sum-num] 
+	 F[0,0] := 1
+
+
+F[0,0] := 1
+
+for num in [1,n]
+	for sum in[0,n]
+		if num > sum 
+			f[num,sum] := f[num-1,sum]
+		else
+			f[num,sum] := F[num-1,sum] + F[num,sum-num] 
+
+
+
+Optimize 1:
+NEED 2 ROWS TO USE FORMAL 
+
+F[0,0] := 1
+x := 0 // current row
+y := 1 // next row
+
+for m in [1,n]
+	for v in [0,n]
+		if m > v
+			f[y,v] := f[x,v]	
+		else
+			f[y,v] := f[x,v] + f[y,v-m]
+	// swap x and y  
+	x := 1 - x
+	y := 1 - y
+	
+
+
+Optimize 2:
+NEED 1 ROWS TO USE FORMAL f[v] := f[v] + f[v-m]
+
+f[0] := 1
+for m in [1,n]
+	for v in [m,n]
+		f[v] := f[v] + f[v-m]
