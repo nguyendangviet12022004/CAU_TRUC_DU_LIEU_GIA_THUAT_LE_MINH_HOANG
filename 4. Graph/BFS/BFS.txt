@@ -1,0 +1,9 @@
+Queue add start vertice
+
+while queue is not empty
+	front := queue.poll
+	// insert code
+
+	for not visíted and adj to front
+		stack.push
+		visited = true

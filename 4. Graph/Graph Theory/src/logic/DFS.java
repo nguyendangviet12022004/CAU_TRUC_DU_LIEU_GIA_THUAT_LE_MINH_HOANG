@@ -6,7 +6,7 @@ import mock.Data;
 
 public class DFS {
     
-    public static void DFS(int[][] graph, int vertices, int start, int end){
+    public static void dfs(int[][] graph, int vertices, int start, int end){
         Stack<Integer> stack = new Stack<>();
         int[] pre = new int[vertices + 1];
         Arrays.fill(pre, -1);
@@ -30,6 +30,6 @@ public class DFS {
         System.out.println(start);
     }
     public static void main(String[] args) {
-        DFS(Data.graph1(), 8, 1, 5);
+        dfs(Data.graph1(), 8, 1, 5);
     }
 }
