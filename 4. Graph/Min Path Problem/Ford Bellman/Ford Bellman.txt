@@ -1,0 +1,10 @@
+Run := True
+
+While run 
+	run := false
+	for u [1,n]
+		for v [1,n]
+			if d[v] > d[u] + c[u,v]
+				 -> update d[v]
+				trace[v] := u
+				run := True

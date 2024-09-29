@@ -1,0 +1,20 @@
+Visit(u)
+	count ++ ( static variable)
+	u.low := u.index := count
+	u.visit := true
+	stack.push(u)
+
+	for not visited and adj vertice v
+		if v.visit
+			u.low = min(u.low,v.index)
+		else
+			visit(v)
+			u.low = min(u.low,v.low)
+
+	if u.low = u.index ( u is pivot)
+		repeate 
+			v := pop
+			output v
+			disable v
+		until v = n
+	

@@ -1,0 +1,10 @@
+push start vertices to stack
+
+while stack is not empty
+	w := top
+	if w is isolate 
+		pop and push to the result set
+	else
+		push the first adj vertice to stack
+		remove added edge
+
